@@ -15,7 +15,7 @@ import { ProductsModule } from './products/products.module';
       password: '1234', // <-- MUITO IMPORTANTE: Coloque a senha que você configurou na instalação do MySQL
       database: 'products3', // O nome do banco que criamos no Workbench
       entities: [__dirname + '/**/*.entity{.ts,.js}'], // Encontra as entidades automaticamente
-      synchronize: true, // Apenas para desenvolvimento! Cria as tabelas automaticamente.
+      synchronize: false, // Apenas para desenvolvimento! Cria as tabelas automaticamente.
     }),
     ProductsModule,
   ],
