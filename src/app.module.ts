@@ -1,9 +1,9 @@
-// src/app.module.ts
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -18,8 +18,10 @@ import { ProductsModule } from './products/products.module';
       synchronize: false, // Apenas para desenvolvimento! Cria as tabelas automaticamente.
     }),
     ProductsModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
+
 export class AppModule {}
